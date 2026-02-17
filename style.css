@@ -1,0 +1,537 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+*::selection{
+    color: #fff;
+    background-color: #000;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #ffffff;
+}
+#nav{
+    /*height: 100px;*/
+    width: 100%;
+    background-color: rgb(187, 189, 187);
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+
+
+#nav #nav-part2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: futura;
+}
+#links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: futura;
+}
+
+#nav-part1{
+ 
+    overflow: hidden;
+    display: flex;
+}
+#nav-part1 svg{
+    position: relative;
+    display: block;
+}
+
+
+#links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 20px;
+}
+#icons {
+  margin-left: auto;   /* Pushes icons to the far right */
+  display: flex;
+  gap: 30px;
+}
+
+
+
+#icons i {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+
+
+#cursor{
+    height: 180px;
+    width: 180px;
+    background-color: rgba(20, 18, 15, 0.582);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+    
+}
+
+
+#page1{
+    min-height: 100vh;
+    /*background-color: aqua;*/
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 10vh;
+}
+
+#page1 h1{
+    font-size: 14.8vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 13vw;
+    letter-spacing: -8px;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play{
+    padding: 2.5vw 2vw;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 1vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;  
+
+}
+.discover-wrapper {
+    text-align: center;   
+    margin-top: 60px;   /* adjust to push lower */
+}
+
+.discover {
+    display: inline-block;
+    background-color: white;   /* white background */
+    color: black;              /* black text */
+    text-decoration: none;
+    font-family: futura;
+    font-size: 20px;       
+    font-weight: bold;
+    padding: 16px 40px;    
+    border-radius: 5px;
+    border: 2px solid black;   /* border to keep shape visible */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.discover:hover {
+    background-color: black;   /* turn black */
+    color: white;              /* text turns white */
+}
+
+
+
+
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 3vw 1vw;
+  justify-content: space-between;
+}
+
+#page2 .elem {
+  height: 100%;
+  width: 32%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page2 .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+/* Button Container */
+#page2 .elem .dets {
+  width: 325px;
+  border-radius: 50px;
+  background-color: rgb(187, 189, 187); /* beige style */
+  position: absolute;
+  z-index: 9;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* SHOP Button Layout */
+.SHOP {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.SHOP .icon {
+  font-size: 18px;
+}
+
+.product-preview {
+  display: none;
+  margin-top: 15px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.product-preview .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* add more space between the two images */
+}
+
+.product-preview .images img {
+  width: 40%;          /* slightly smaller than before */
+  height: auto;        /* keeps aspect ratio */
+  max-height: 140px;   /* keeps them balanced */
+  object-fit: contain; /* ensures full image is visible */
+  border-radius: 10px;
+}
+
+.product-preview .product-name {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+
+
+
+
+/* Hover Effect */
+#page2 .elem .dets:hover {
+  border-radius: 20px;
+  height: auto;
+}
+
+#page2 .elem .dets:hover .product-preview {
+  display: block;
+}
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;   /* products align from top */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;  /* spacing between products */
+}
+
+.child {
+    height: auto;   /* allow height to adjust */
+    width: 39vw;
+    display: flex;
+    flex-direction: column;   /* stack items vertically */
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.child img {
+    height: 85vh;
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 10px;  /* space between image and text */
+}
+
+.product-name {
+    font-family: "Futura", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+    color: #111;
+}
+
+.price {
+    font-family: "Futura", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+}
+
+
+#page4{
+    height: 223vh;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 5vw 0;
+}
+#move{
+    background-color: #BEBEBE;
+    display: flex;
+    padding: 3vw 0;
+    overflow: hidden;
+}
+
+#marque{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    padding: 0 1.5vw;
+    transform: translateX(-100%);
+}
+
+#marque h2{
+    font-size: 4vw;
+    font-family: futura;
+}
+#marque img{
+    height: 4vw;
+
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page5 .elem{
+    height: 100%;
+    width: 32%;
+    /*background-color: blue;*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page5 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+.section-heading {
+  font-size: 25px;
+  font-weight: 650;     /* lighter weight */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #111;
+  margin: 100px 0 10px; /* adjust how low it sits */
+  padding-left: 10px;
+}
+
+
+
+/* Container */
+.about {
+  width: 100vw;              /* take full viewport width */
+  max-width: 100%;           /* remove restriction */
+  margin: 60px 0 40px 0;     /* no auto centering */
+  padding: 0 40px;           /* side breathing room */
+  text-align: justify;       /* spread text neatly */
+  color: #111;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Headings + spacing */
+
+
+.about h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  margin: 0 0 10px 0;         /* space under main heading */
+}
+
+.about-sub {                  /* h3 under main title */
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;         /* spacing after subheading */
+}
+
+.about h4, .about h5 {
+  margin: 24px 0 10px;
+  font-weight: 700;
+}
+
+.about p {
+  margin: 0 0 14px 0;         /* consistent paragraph spacing */
+  line-height: 1.75;
+  font-size: 15px;
+  color: #222;
+}
+
+.about-list {
+  margin: 8px 0 16px 18px;    /* indent bullets a bit */
+  line-height: 1.7;
+}
+
+/* Read more panel (collapsed by default) */
+.about__more {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 400ms ease;
+}
+
+/* Open state (big enough to reveal all; adjust if you add more text) */
+.about.is-open .about__more {
+  max-height: 4000px;
+}
+
+/* Button */
+.about__toggle {
+  margin-top: 14px;
+  padding: 9px 18px;
+  border: 0;
+  border-radius: 22px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;      /* stays left under the text */
+  transition: transform .1s ease, opacity .2s ease, background .2s;
+}
+
+.about__toggle:hover { background: #333; }
+.about__toggle:active { transform: translateY(1px); }
+
+.footer{ background-color:#f1f1f1; color:#000; padding:0; }
+
+/* marquee shipping banner */
+.shipping-banner{ background:#000; color:#fff; overflow:hidden; }
+.shipping-track{
+  display:inline-flex; gap:48px; padding:15px 0;
+  white-space:nowrap; will-change:transform;
+  animation: ship-scroll 18s linear infinite;
+}
+.shipping-track span{ font-weight:bold; font-size:14px; letter-spacing:1px; text-transform:uppercase; }
+
+@keyframes ship-scroll{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;   /* keep logo aligned at top */
+  padding: 40px 60px;
+  background-color: #f1f1f1;
+}
+
+
+.footer-logo svg {
+  margin-top: 50px; /* adjust as needed */
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  justify-content: center;   /* center the columns */
+  flex: 1;                   /* let it take available space */
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+
+
